@@ -8,5 +8,6 @@ const routes = Router()
 routes.use('/alunos', alunoRoutes)
 routes.use('/cursos', cursoRoutes)
 routes.use('/login', loginRoutes)
+routes.use('/professores', loginRoutes)
 
 module.exports = routes
