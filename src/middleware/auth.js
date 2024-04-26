@@ -1,8 +1,4 @@
-// Verificar a autenticidade do token informado!
-
 const { verify } = require("jsonwebtoken")
-
-const { auth } = require('../middleware')
 
 async function auth(req, res, next) {
     try {

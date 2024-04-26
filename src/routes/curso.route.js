@@ -1,9 +1,10 @@
 
 const { Router, query } = require('express') // 
-const Curso = require('../models/Curso')
+
+const {auth} = require('../middleware/auth')
+
 const CursosController = require('../controllers/CursosController')
 
-const { auth } = require('../middleware/auth')
 
 const cursoRoutes = new Router()
 
