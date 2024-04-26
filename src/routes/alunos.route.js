@@ -6,7 +6,7 @@ const AlunoController = require('../controllers/AlunoController')
 
 const alunoRoutes = new Router()
 
-alunoRoutes.post('/', AlunoController.cadastrar)
+alunoRoutes.post('/',auth, AlunoController.cadastrar)
 alunoRoutes.get('/', auth, AlunoController.listarTodos)
 alunoRoutes.get('/:id', auth, AlunoController.listarUm)
 

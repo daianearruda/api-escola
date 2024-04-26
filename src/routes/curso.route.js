@@ -8,7 +8,7 @@ const CursosController = require('../controllers/CursosController')
 
 const cursoRoutes = new Router()
 
-cursoRoutes.post('/', CursosController.cadastrarCurso)
+cursoRoutes.post('/', auth,CursosController.cadastrarCurso)
 cursoRoutes.get('/', auth,CursosController.listarCurso )
 cursoRoutes.delete('/:id', auth, CursosController.deletarCursoId)
 cursoRoutes.put('/:id', auth, CursosController.editarCurso )

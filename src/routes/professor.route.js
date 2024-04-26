@@ -1,11 +1,12 @@
 const { Router } = require('express');
 const ProfessorController = require('../controllers/ProfessorController');
+const {auth} = require('../middleware/auth')
 
 const professorRoutes = Router();
 
-professorRoutes.post('/', ProfessorController.cadastrarProfessor);
-professorRoutes.get('/', ProfessorController.listarProfessores);
-professorRoutes.put('/:id', ProfessorController.editarProfessores);
-professorRoutes.delete('/:id', ProfessorController.deletarProfessor);
+professorRoutes.post('/', auth, ProfessorController.cadastrarProfessor);
+professorRoutes.get('/',auth, ProfessorController.listarProfessores);
+professorRoutes.put('/:id',auth, ProfessorController.editarProfessores);
+professorRoutes.delete('/:id',auth, ProfessorController.deletarProfessor);
 
 module.exports = professorRoutes;
