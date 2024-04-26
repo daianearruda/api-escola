@@ -2,6 +2,8 @@
 
 const { verify } = require("jsonwebtoken")
 
+const { auth } = require('../middleware')
+
 async function auth(req, res, next) {
     try {
         console.log("Entramos no Middleware")
