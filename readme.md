@@ -5,6 +5,7 @@
 ### Na primeira vez é necessário instalar as dependencias:
 1. `npm install`
 2. Se for em ambiente local: `npm install --dev`
+
 3. `cp .env_example .env`
 
 ### Para rodar o repositório em ambiente local
