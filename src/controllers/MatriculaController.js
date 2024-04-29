@@ -1,4 +1,5 @@
 const Aluno = require("../models/Aluno")
+const Curso= require("../models/Curso")
 const Matricula = require("../models/Matriculas")
 
 class MatriculaController {
@@ -15,7 +16,6 @@ class MatriculaController {
             }
 
             const alunoExistente = await Aluno.findByPk(aluno_id)
-
             if(!alunoExistente) {
                 return res.status(404).json({messagem: 'O aluno nao existe'})
             }
@@ -47,7 +47,7 @@ class MatriculaController {
 
             res.status(201).json(matricula)
         } catch (error) {
-            res.status(500).json({messagem: 'Houve um erro ao cadastrar ao matricula'})
+            res.status(500).json({messagem: 'Houve um erro ao cadastrar a matricula'})
         }
     }
 }
